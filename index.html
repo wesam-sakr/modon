@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
 
+  <!-- fancybox link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
   <!-- aos link -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -31,18 +34,11 @@
 <body>
 
   <!-- -------- SPINNING SQUARES ----------- -->
-  <!-- <div id="loading">
-    <div class="spinner-box">
-      <div class="configure-border-1">
-        <div class="configure-core"></div>
-      </div>
-      <div class="configure-border-2">
-        <div class="configure-core">
-          <img src="images/logo.png" alt="" />
-        </div>
-      </div>
+  <div id="loading">
+    <div class="loader">
+      <img src="images/logo.png" alt="" />
     </div>
-  </div> -->
+  </div>
 
   <!------------- header section ------------->
   <nav class="navbar navbar-expand-lg navbar-light top-0" data-aos="fade-down">
@@ -74,7 +70,7 @@
         </ul>
         <ul class="m-0 d-flex align-items-center">
           <li class="nav-item">
-            <a class="main-btn" href="tel:0112063357">
+            <a class="main-btn" role="button" data-bs-toggle="modal" data-bs-target="#whatsappModal">
               <span class="text">
                 اتصل بنا
               </span>
@@ -97,15 +93,81 @@
           </button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3">
           </button>
-          <div></div>
         </div>
         <div class="carousel-inner h-100">
           <div class="carousel-item active" data-bs-interval="20000">
             <img src="images/Rectangle 7.png" class="d-block w-100 h-100" alt="...">
             <div class="carousel-caption d-md-block">
-              <h4>
+              <h1 class="fw-bold">
                 شركة مدن
-              </h4>
+              </h1>
+              <h5 class="mb-4">
+                الحديثة العالمية للإستثمار
+              </h5>
+              <div class="header_imgs">
+                <div class="div1">
+                  <img src="images/bg1.jpg" alt="">
+                </div>
+                <div class="div2">
+                  <img src="images/bg2.jpg" alt="">
+                </div>
+                <div class="div3">
+                  <img src="images/Rectangle 7.png" alt="" srcset="">
+                </div>
+                <div class="div4">
+                  <img src="images/bg1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="20000">
+            <img src="images/bg1.jpg" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h1 class="fw-bold">
+                شركة مدن
+              </h1>
+              <h5 class="mb-4">
+                الحديثة العالمية للإستثمار
+              </h5>
+              <div class="header_imgs">
+                <div class="div1">
+                  <img src="images/bg1.jpg" alt="">
+                </div>
+                <div class="div2">
+                  <img src="images/bg2.jpg" alt="">
+                </div>
+                <div class="div3">
+                  <img src="images/Rectangle 7.png" alt="" srcset="">
+                </div>
+                <div class="div4">
+                  <img src="images/bg1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="20000">
+            <img src="images/Rectangle 7.png" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h1 class="fw-bold">
+                شركة مدن
+              </h1>
+              <h5 class="mb-4">
+                الحديثة العالمية للإستثمار
+              </h5>
+              <div class="header_imgs">
+                <div class="div1">
+                  <img src="images/bg1.jpg" alt="">
+                </div>
+                <div class="div2">
+                  <img src="images/bg2.jpg" alt="">
+                </div>
+                <div class="div3">
+                  <img src="images/Rectangle 7.png" alt="" srcset="">
+                </div>
+                <div class="div4">
+                  <img src="images/bg1.jpg" alt="">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -114,13 +176,15 @@
     <img src="images/shape.svg" class="w-100 h-shape" alt="">
   </header>
 
+
+
   <!-------------- about us section -------------->
   <section class="aboutUs m-0" id="about">
-    <div class="container">
-      <!-- features section -->
-      <div class="features">
-        <h5>شركة مدن العقارية</h5>
-        <div class="row h-100">
+    <!-- features section -->
+    <div class="features">
+      <div class="container">
+        <h5 class="title">شركة مدن العقارية</h5>
+        <div class="row gy-3 h-100">
           <div class="col-md-4 align-self-start" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
             <div class="s-single-services text-center">
               <img src="../images/Rectangle 10.png" class="w-100" alt="feature">
@@ -184,631 +248,465 @@
           </div>
         </div>
       </div>
-      <!-- goals section -->
-      <div class="row align-items-center justify-content-between align-items-center gx-0 gy-3">
-        <div class="col-lg-6" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="400">
-          <h6 class="fw-bold">
-            <span class="main-color">
-              شركة مدن العقارية
-            </span>
-          </h6>
-          <h4 class="my-4 w-75">
-            لماذا تختار شركة مدن العقارية للمقاولات العامة؟
-          </h4>
-          <p>
-            نحن شركة الرياض والكنانة للمقاولات يسعدنا أن نقدم أنفسنا كإحدي الشركات الرائدة في مجال المقاولات العامة
-            لصاحبها /أحمد صلاح الشحات الزعبلاوي و يحيي أحمد الخرش الزهراني , تم تنفيذ مشاريع الخاصة للمقاولات العامة
-            وتشمل المباني وصيانة ونظافة وتشغيل وترميم المباني والأعمال الكهربائية والميكانيكية وأعمال الطرق وأعمال
-            المياه والصرف الصحي حيث قمنا بتفيذ العديد من المشاريع الحكومية وكذلك المشاريع شبه الحكومية وحققت شركتنا
-            نجاحاً باهراً في كل الأعمال التي نقوم بها وخاصة بمجال المقاولات العامة حيث نفذنا الكثير من المشاريع الحكومية
-            علما بأن شركتنا مصنفة بالدرجة الخامسة في مجال أعمال المباني والخامسة للطرق والرابعة لأعمال المياه والصرف
-            الصحي ولأعمال الكهربائية والميكانيكة بموجب شهادة التصنيف .
-          </p>
-          <a href="" class="main-btn mt-3">
-            <span>
-              حمل البروفايل
-            </span>
-          </a>
-        </div>
-        <div class="col-lg-5 position-relative" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="600">
-          <div class="artBadge position-relative">
-            <img src="images/3.png" class="w-100" alt="">
-          </div>
-          <div class="float-img">
-          </div>
-        </div>
-        <!-- goals section -->
-        <div class="goals mt-5">
-          <div class="row justify-content-between align-items-center gy-3">
-            <div class="col-12 col-lg-6" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="600">
-              <h4 class="my-4 fw-bold">
-                رؤيتنا
-              </h4>
-              <p>
-                أن نكون شركة المقاولات الرائدة في مجال الانشاءات والتشغيل والصيانة والنظافة .
-              </p>
-              <h4 class="my-4 fw-bold">
-                رسالتنا
-              </h4>
-              <p>
-                تنفي المشاريع الموكلة بإحترافية وأمانة من خلال فريق عمل نوعي مخلص يهتم بإرضاء العميل ويستخدم أحدث معايير
-                الجودة ويسعي إلي مواكبة مستدات القطاع بإستمرار .
-              </p>
+    </div>
 
-              <a href="tel:0112063357" class="btn bg-main-color rounded-pill badge fs-6 px-4 py-3 my-4">
-                اتصل بنا
-              </a>
-            </div>
-            <div class="col-12 col-md-10 col-lg-6" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
-              <div class="gallery-container">
-                <div class="item">
-                  <img src="images/build.webp" alt="">
-                </div>
-                <div class="item">
-                  <img src="images/build2.webp" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- description section -->
-      <div class="space" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400" style="background: url('images/Rectangle 14.png');
-    background-position: center;
-    background-size: cover;">
-        <div class="description">
-          <img src="images/logo.png" alt="">
-          <p>
-            شركة الرياض والكنانة في جميع أنواع خدمات التشييد والبناء والتطوير العقاري
-          </p>
-        </div>
-      </div>
+
+    <div class="feature-area overflow-hidden space-top shape-mockup-wrap" id="feature-area">
       <div class="container">
-        <!-- why us section -->
-        <div class="space">
-          <h6 class="fw-bold">
-            <span class="main-color">لماذا نحن ؟</span>
-          </h6>
-          <h4 class="mt-3 mb-5">
-            ما يميز شركتنا
-          </h4>
-          <div class="row">
-            <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-              <img src="images/f1.png" width="70px" alt="">
-              <img src="images/Frame 3169.png" alt="" class="line-img">
-              <h5 class="fw-bold mt-4 mb-3">أفكار قيمة</h5>
-              <p>
-                نقدم لك مجموعة من الحلول المبنية على أفكار تنفيذية مبدعة في المقاولات
-              </p>
-            </div>
-            <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-              <img src="images/f2.png" width="70px" alt="">
-              <img src="images/Frame 3170.png" alt="" class="line-img">
-              <h5 class="fw-bold mt-4 mb-3">استشارات مهنية</h5>
-              <p>
-                احصل على استشارة مهنية شخصية من أفضل المهندسيين والمتخصصين في المقاولات
-              </p>
-            </div>
-            <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
-              <img src="images/f3.png" width="70px" alt="">
-              <h5 class="fw-bold mt-4 mb-3">مرونة الميزانية</h5>
-              <p>
-                جميع الحلول لدينا نقدمها لك بناء على ميزانيتك المقترحة من قبل فنحن نقدم للعميل ما يناسبه
-              </p>
+        <div class="title-area ">
+          <span class="sub-title style1 m-auto">لماذا نحن ؟</span>
+          <h2 class="sec-title text-center">ما يميز شركتنا</h2>
+        </div>
+        <div class="row gy-4 justify-content-center">
+          <div class="col-md-6 col-xl-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+            <div class="feature-item th-ani">
+              <div class="feature-item_shape">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 29"
+                  style="enable-background:new 0 0 29 29;" xml:space="preserve">
+                  <path fill="#ed1845"
+                    d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z" />
+                </svg>
+              </div>
+              <div class="feature-item_shape2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 29"
+                  style="enable-background:new 0 0 29 29;" xml:space="preserve">
+                  <path fill="#ed1845"
+                    d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z" />
+                </svg>
+              </div>
+              <div class="feature-item_icon">
+                <img src="images/icons/Frame 1171277200.png" alt="icon">
+              </div>
+              <div class="media-body">
+                <h3 class="box-title">أفكار قيمة</h3>
+                <p class="feature-item_text">
+                  نقدم لك مجموعة من الحلول المبنية على أفكار تنفيذية مبدعة في المقاولات
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- counter section -->
-        <div class="space" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
-          <div class="counters">
-            <div class="row w-100 justify-content-center align-items-end text-center gy-4 py-5">
-              <div class="d-count col-6 col-sm-6 col-lg-3">
-                <img src="images/Calendar.svg" alt="">
-                <div class="count-txt">
-                  <h4 class="counter" data-target="1998">0</h4>
-                  <p class="text-muted">عام الأفتتاح</p>
-                </div>
+          <div class="col-md-6 col-xl-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+            <div class="feature-item th-ani">
+              <div class="feature-item_shape">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 29"
+                  style="enable-background:new 0 0 29 29;" xml:space="preserve">
+                  <path fill="#ed1845"
+                    d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z" />
+                </svg>
               </div>
-              <div class="d-count col-6 col-sm-6 col-lg-3">
-                <img src="images/shield-check 1.svg" alt="">
-                <div class="count-txt">
-                  <h4 class="counter" data-target="25">0</h4>
-                  <p class="text-muted">سنوات الخبرة</p>
-                </div>
+              <div class="feature-item_shape2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 29"
+                  style="enable-background:new 0 0 29 29;" xml:space="preserve">
+                  <path fill="#ed1845"
+                    d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z" />
+                </svg>
               </div>
-              <div class="d-count col-6 col-sm-6 col-lg-3">
-                <img src="images/mdi_progress-check.svg" alt="">
-                <div class="count-txt">
-                  <h4>
-                    <span>+</span>
-                    <span class="counter" data-target="350">0</span>
-                  </h4>
-                  <p class="text-muted">مشروعات منفذة</p>
-                </div>
+              <div class="feature-item_icon">
+                <img src="images/icons/feature_1_1.svg fill.png" alt="icon">
               </div>
-              <div class="d-count col-6 col-sm-6 col-lg-3">
-                <img src="images/bi_building-up.svg" alt="">
-                <div class="count-txt">
-                  <h4>
-                    <span>+</span>
-                    <span class="counter" data-target="20">0</span>
-                  </h4>
-                  <p class="text-muted">مشاريع قائمة</p>
-                </div>
+              <div class="media-body">
+                <h3 class="box-title">استشارات مهنية </h3>
+                <p class="feature-item_text">
+                  شركتنا ذو خبرة واسعة حيث انها أكثر من 25 سنين من الخبرة
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+            <div class="feature-item th-ani">
+              <div class="feature-item_shape">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 29"
+                  style="enable-background:new 0 0 29 29;" xml:space="preserve">
+                  <path fill="#ed1845"
+                    d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z" />
+                </svg>
+              </div>
+              <div class="feature-item_shape2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 29"
+                  style="enable-background:new 0 0 29 29;" xml:space="preserve">
+                  <path fill="#ed1845"
+                    d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z" />
+                </svg>
+              </div>
+              <div class="feature-item_icon">
+                <img src="images/icons/feature_1_2.svg.png" alt="icon">
+              </div>
+              <div class="media-body">
+                <h3 class="box-title">أفكار قيمة</h3>
+                <p class="feature-item_text">
+                  نقدم لك مجموعة من الحلول المبنية على أفكار تنفيذية مبدعة في المقاولات
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- <div class="shape-mockup jump d-none d-xxl-block" style="top: 2%; left: 0%;"><img src="images/shape_3.png"
+          alt="shape"> -->
+    </div>
 
-  </section>
-
-  <div class="feature-area overflow-hidden space-top shape-mockup-wrap" id="feature-area">
-    <div class="container">
-      <div class="title-area">
-        <span class="sub-title style1">لماذا نحن ؟</span>
-        <h2 class="sec-title">ما يميز شركتنا</h2>
-      </div>
-      <div class="row gy-4 justify-content-center">
-        <div class="col-md-6 col-xl-4">
-          <div class="feature-item th-ani">
-            <div class="feature-item_shape">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 29 29" style="enable-background:new 0 0 29 29;" xml:space="preserve">
-           <path fill="#ed1845" d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z"/>
-           </svg>
-            </div>
-            <div class="feature-item_shape2">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 29 29" style="enable-background:new 0 0 29 29;" xml:space="preserve">
-              <path fill="#ed1845" d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z"/>
-              </svg>
-            </div>
-            <div class="feature-item_icon">
-              <img src="images/icons/Frame 1171277200.png" alt="icon">
-            </div>
-            <div class="media-body">
-              <h3 class="box-title">أفكار قيمة</h3>
-              <p class="feature-item_text">
-                نقدم لك مجموعة من الحلول المبنية على أفكار تنفيذية مبدعة في المقاولات
-              </p>
+    <div class="whoAre space">
+      <div class="container">
+        <div class="title-area ">
+          <span class="sub-title style1 m-auto">من نحن ؟</span>
+          <h2 class="sec-title text-center" style="text-wrap: balance;width: 75%;margin: auto;">نقدم لك مجموعة من الحلول
+            المبنية على أفكار تنفيذية مبدعة في المقاولات</h2>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-xl-3 col-lg-6"  data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="800">
+            <div class="about-wrapper">
+              <p class="about-desc">شركة مدن العقارية في جميع أنواع خدمات التشييد والبناء والتطوير العقاري</p>
+              <div class="checklist mb-40">
+                <ul>
+                  <li>25 سنوات خبرة</li>
+                  <li>وكلاء مؤهلون</li>
+                  <li>تكنولوجيا رائعة</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-xl-4">
-          <div class="feature-item th-ani">
-            <div class="feature-item_shape">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 29 29" style="enable-background:new 0 0 29 29;" xml:space="preserve">
-           <path fill="#ed1845" d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z"/>
-           </svg>
-            </div>
-            <div class="feature-item_shape2">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 29 29" style="enable-background:new 0 0 29 29;" xml:space="preserve">
-              <path fill="#ed1845" d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z"/>
-              </svg>
-            </div>
-            <div class="feature-item_icon">
-              <img src="images/icons/Frame 1171277200.png" alt="icon">
-            </div>
-            <div class="media-body">
-              <h3 class="box-title">أفكار قيمة</h3>
-              <p class="feature-item_text">
-                نقدم لك مجموعة من الحلول المبنية على أفكار تنفيذية مبدعة في المقاولات
-              </p>
+          <div class="col-xl-6 col-lg-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+            <div class="img-box2">
+              <div class="img1"><img src="images/about_2_2..png" alt="About"></div>
+              <div class="img2"><img src="images/Mask Group.png" alt="About"></div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-xl-4">
-          <div class="feature-item th-ani">
-            <div class="feature-item_shape">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 29 29" style="enable-background:new 0 0 29 29;" xml:space="preserve">
-           <path fill="#ed1845" d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z"/>
-           </svg>
-            </div>
-            <div class="feature-item_shape2">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 29 29" style="enable-background:new 0 0 29 29;" xml:space="preserve">
-              <path fill="#ed1845" d="M14.5,0.5l3.8,10.2l10.2,3.8l-10.2,3.8l-3.8,10.2l-3.8-10.2L0.5,14.5l10.2-3.8L14.5,0.5z"/>
-              </svg>
-            </div>
-            <div class="feature-item_icon">
-              <img src="images/icons/Frame 1171277200.png" alt="icon">
-            </div>
-            <div class="media-body">
-              <h3 class="box-title">أفكار قيمة</h3>
-              <p class="feature-item_text">
-                نقدم لك مجموعة من الحلول المبنية على أفكار تنفيذية مبدعة في المقاولات
-              </p>
+          <div class="col-xl-3 col-lg-6"  data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="800">
+            <div class="counter-box-wrap">
+              <div class="counter-box">
+                <div class="media-body">
+                  <h3 class="box-number"><span class="counter-number">1998</h3>
+                  <p class="box-text">عام الإفتتاح</p>
+                </div>
+              </div>
+              <div class="counter-box">
+                <div class="media-body">
+                  <h3 class="box-number"><span class="counter-number">25</h3>
+                  <p class="box-text">سنوات خبرة</p>
+                </div>
+              </div>
+              <div class="counter-box">
+                <div class="media-body">
+                  <h3 class="box-number"><span class="text">+</span><span class="counter-number">93</span></h3>
+                  <p class="box-text">عدد المشاريع</p>
+                </div>
+              </div>
+              <div class="counter-box">
+                <div class="media-body">
+                  <h3 class="box-number"><span class="text">+</span><span class="counter-number">10</span></h3>
+                  <p class="box-text">مشاريع قائمة</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="shape-mockup jump d-none d-xxl-block" style="top: 2%; left: 0%;"><img src="assets/img/shape/shape_3.png"
-        alt="shape"></div>
-  </div>
 
+    <!-- whyUs section -->
+    <div class="whyUs">
+      <div class="container">
+        <div class="row align-items-center justify-content-between align-items-center gx-0 gy-3">
+          <div class="col-lg-6" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="400">
+            <h6 class="fw-bold">
+              <span class="main-color">
+                شركة مدن العقارية
+              </span>
+            </h6>
+            <h4 class="my-4 w-75">
+              لماذا تختار شركة مدن العقارية للمقاولات العامة؟
+            </h4>
+            <p>
+              نحن شركة الرياض والكنانة للمقاولات يسعدنا أن نقدم أنفسنا كإحدي الشركات الرائدة في مجال المقاولات العامة
+              لصاحبها /أحمد صلاح الشحات الزعبلاوي و يحيي أحمد الخرش الزهراني , تم تنفيذ مشاريع الخاصة للمقاولات العامة
+              وتشمل المباني وصيانة ونظافة وتشغيل وترميم المباني والأعمال الكهربائية والميكانيكية وأعمال الطرق وأعمال
+              المياه والصرف الصحي حيث قمنا بتفيذ العديد من المشاريع الحكومية وكذلك المشاريع شبه الحكومية وحققت شركتنا
+              نجاحاً باهراً في كل الأعمال التي نقوم بها وخاصة بمجال المقاولات العامة حيث نفذنا الكثير من المشاريع
+              الحكومية
+              علما بأن شركتنا مصنفة بالدرجة الخامسة في مجال أعمال المباني والخامسة للطرق والرابعة لأعمال المياه والصرف
+              الصحي ولأعمال الكهربائية والميكانيكة بموجب شهادة التصنيف .
+            </p>
+            <a href="" class="main-btn mt-3">
+              <span>
+                حمل البروفايل
+              </span>
+            </a>
+          </div>
+          <div class="col-lg-5 position-relative" data-aos="fade-up-right" data-aos-duration="1000"
+            data-aos-delay="600">
+            <div class="artBadge position-relative">
+              <img src="images/3.png" class="w-100" alt="">
+            </div>
+            <div class="float-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- goals section -->
+    <div class="goals">
+      <div class="container">
+        <div class="row justify-content-between align-items-end gy-3">
+          <div class="col-12 col-lg-6" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="600">
+            <div class="vision">
+              <div class="card">
+                <img class="card-img-top" src="images/icons/vision.png" alt="">
+                <div class="card-body px-0">
+                  <h4 class="card-title">
+                    رؤيتنا
+                  </h4>
+                  <p>
+                    أن نكون الشركة الرائدة في أعمال المقاولات في مجال الأعمال المدنية والإنشاءات وأعمال التشطيبات وأعمال
+                    الترميم وأعمال السباكة وأعمال الكهرباء والأعمال الميكانيكة وأعمال البنية التحتية وأعمال الغازات
+                    الطبية للمنشآت وأعمال نظام التليفون للمنشآت .
+                  </p>
+                </div>
+                <a href="#contactUs" class="main-btn m-auto">
+                  <span>
+                    تواصل معنا
+                  </span>
+                </a>
+              </div>
+              <div class="card">
+                <img src="images/icons/mission.png" alt="" class="card-img-top">
+                <div class="card-body px-0">
+                  <h4 class="card-title">
+                    رسالتنا
+                  </h4>
+                  <p>
+                    تنفي المشاريع الموكلة بإحترافية وأمانة من خلال فريق عمل نوعي مخلص يهتم بإرضاء العميل ويستخدم أحدث
+                    معايير الجودة ويسعي إلي مواكبة مستدات القطاع بإستمرار .
+                  </p>
+                </div>
+                <a href="#contactUs" class="main-btn m-auto">
+                  <span>
+                    تواصل معنا
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-10 col-lg-5" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+            <div class="gallery-container">
+              <div class="item">
+                <img src="images/1.png" alt="">
+              </div>
+              <div class="exp">
+                <img src="images/icons/shield-check 1.png" alt="" width="26px">
+                <span class="exp-num">25</span>
+                <span>سنوات الخبرة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-------------- services section -------------->
-  <section class="space" id="services">
-    <div class="services-wrapper"
-      style="background: url(images/Rectangle\ 15.png);background-position: center;padding:5rem 0">
-      <div class="container">
-        <h3 class="text-white text-center mb-5 fw-bold">حزمة من خدمات المقاولات العامة</h3>
-        <ul class="row gy-4">
-          <li class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="400">
-            <div class="service">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.229"
-                  height="83.676" viewBox="0 0 95.229 83.676">
-                  <defs>
-                    <style>
-                      .cls-1 {
-                        opacity: 0.5;
-                      }
-
-                      .cls-2 {
-                        fill: url(#linear-gradient);
-                      }
-                    </style>
-                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                      <stop offset="0" stop-color="#ffd10a" />
-                      <stop offset="0.048" stop-color="#ffd00c" />
-                      <stop offset="1" stop-color="#fec23c" />
-                    </linearGradient>
-                  </defs>
-                  <g id="Group_68098" data-name="Group 68098" class="cls-1" transform="translate(-1648 -1496)">
-                    <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(1648 1496)">
-                      <path id="Rectangle_21" data-name="Rectangle 21" class="cls-2"
-                        d="M46.953,3.581c25.721,0,43.509,4.722,43.509,30.442s-.427,53.234-26.148,53.234c-11.111,0-30.324-5.111-43.467-16.479S-4.767,55.913-4.767,41.3C-4.767,15.583,21.232,3.581,46.953,3.581Z"
-                        transform="translate(4.767 -3.581)" />
-                    </g>
-                    <g id="Group_7-2" data-name="Group 7" transform="translate(1661 1506)">
-                      <path id="Rectangle_21-2" data-name="Rectangle 21" class="cls-2"
-                        d="M33.542,3.581c19.051,0,32.227,3.5,32.227,22.549S65.453,65.56,46.4,65.56c-8.23,0-22.461-3.786-32.2-12.206S-4.767,42.343-4.767,31.522C-4.767,12.471,14.49,3.581,33.542,3.581Z"
-                        transform="translate(4.767 -3.581)" />
-                    </g>
-                    <g id="svgexport-6_79_" data-name="svgexport-6 (79)" transform="translate(1675.999 1522)">
-                      <g id="Glyph" transform="translate(0 0)">
-                        <circle id="Ellipse_565" data-name="Ellipse 565" cx="2.354" cy="2.354" r="2.354"
-                          transform="translate(28.678)" />
-                        <circle id="Ellipse_566" data-name="Ellipse 566" cx="1.884" cy="1.884" r="1.884"
-                          transform="translate(18.319 3.767)" />
-                        <circle id="Ellipse_567" data-name="Ellipse 567" cx="2.354" cy="2.354" r="2.354"
-                          transform="translate(7.959)" />
-                        <path id="Path_1264" data-name="Path 1264" d="M20.443,38.51V35H19v2.307Z"
-                          transform="translate(-8.177 -17.767)" />
-                        <path id="Path_1265" data-name="Path 1265" d="M18.894,19H14.4L13.133,29.1h7.023Z"
-                          transform="translate(-6.543 -13.311)" />
-                        <path id="Path_1266" data-name="Path 1266" d="M44.886,35H42v4.111l2.886-2.406Z"
-                          transform="translate(-14.583 -17.767)" />
-                        <path id="Path_1267" data-name="Path 1267" d="M42,19h7.215V29.1H42Z"
-                          transform="translate(-14.583 -13.311)" />
-                        <path id="Path_1268" data-name="Path 1268"
-                          d="M55.653,23.213a.808.808,0,0,0,0-1.144L54,20.414V22.7l.51.51A.826.826,0,0,0,55.653,23.213Z"
-                          transform="translate(-17.925 -13.705)" />
-                        <path id="Path_1269" data-name="Path 1269"
-                          d="M54.453,28.171a.721.721,0,0,0-.593-.16.781.781,0,0,0-.6.788v3.53a.721.721,0,0,1-.211.51L46.56,39.333l-1.02-1.02,3.1-3.1L48.426,35a1.255,1.255,0,0,0-1.866,0L42.189,38.65a4.75,4.75,0,0,0-.621.649s-.006,0-.009.008A2.548,2.548,0,0,0,41,40.987v5.051H46.05V44.595a.722.722,0,0,1,.3-.587l4.906-3.5,3.45-6.9v-4.88a.721.721,0,0,0-.255-.551Z"
-                          transform="translate(-14.304 -15.817)" />
-                        <path id="Path_1270" data-name="Path 1270"
-                          d="M9.389,24.635a.82.82,0,0,0,.669-.158l1.213-1.466.289-2.3-2.52,2.447A.846.846,0,0,0,8.8,24.187a.826.826,0,0,0,.585.449Z"
-                          transform="translate(-5.314 -13.787)" />
-                        <path id="Path_1271" data-name="Path 1271" d="M33,37.051a.722.722,0,1,0,1.443,0V32H33Z"
-                          transform="translate(-12.076 -16.932)" />
-                        <path id="Path_1272" data-name="Path 1272" d="M29,24h4.329v4.329H29Z"
-                          transform="translate(-10.962 -14.704)" />
-                        <path id="Path_1273" data-name="Path 1273" d="M29,37.051a.722.722,0,1,0,1.443,0V32H29Z"
-                          transform="translate(-10.962 -16.932)" />
-                        <path id="Path_1274" data-name="Path 1274"
-                          d="M16.513,38.646l-4.317-3.6A1.245,1.245,0,0,0,10.282,35l-.211.211,3.1,3.1-1.02,1.02L5.654,32.839a.722.722,0,0,1-.211-.51V28.8a.781.781,0,0,0-.6-.788A.722.722,0,0,0,4,28.721V33.6l3.451,6.9,4.906,3.5a.722.722,0,0,1,.3.587v1.443h5.051V40.987a2.831,2.831,0,0,0-1.2-2.341Z"
-                          transform="translate(-4 -15.817)" />
-                        <path id="Path_1275" data-name="Path 1275" d="M23.536,22.229l2.435,2.084v-1.7l-2.665-2.221Z"
-                          transform="translate(-9.377 -13.699)" />
-                        <path id="Path_1276" data-name="Path 1276" d="M37,24.146l2.165-2.165V20.414L37,22.579Z"
-                          transform="translate(-13.19 -13.705)" />
-                      </g>
-                    </g>
-                  </g>
-                </svg>
+  <section class="service-area overflow-hidden" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="title-area mb-0 text-center">
+          <span class="sub-title m-auto">خدماتنا</span>
+          <h2 class="sec-title">حزمه من خدمات المقاولات العامة</h2>
+        </div>
+      </div>
+      <div class="nav nav-tabs service-tabs mb-5 gap-3 justify-content-center style2" id="nav-tab" role="tablist">
+        <button class="main-btn" id="nav-step1-tab">
+          <span>
+            <img src="images/icons/ser_icon_3.svg.png" alt="">
+            مدنية
+          </span>
+        </button>
+        <button class="main-btn" id="nav-step2-tab">
+          <span>
+            <img src="images/icons/ser_icon_2.svg fill.png" alt="">
+            إنشائية
+          </span>
+        </button>
+        <button class="main-btn" id="nav-step3-tab">
+          <span>
+            <img src="images/icons/ser_icon_1.svg fill.png" alt="">
+            معمارية
+          </span>
+        </button>
+      </div>
+      <div class="row gy-4">
+        <div class="col-xl-3 col-md-6" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="400">
+          <div class="service-box style2 background-image">
+            <div class="service-content">
+              <div class="service-box_icon">
+                <img src="images/icons/service_1_1.svg fill.png" alt="icon">
               </div>
-              <h6 class="mt-3 fw-bold">أعمال الكهرباء</h6>
+              <div class="service-box_number">01</div>
             </div>
-          </li>
-          <li class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="600">
-            <div class="service">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.229"
-                height="83.676" viewBox="0 0 95.229 83.676">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      opacity: 0.5;
-                    }
-
-                    .cls-2 {
-                      fill: url(#linear-gradient);
-                    }
-                  </style>
-                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#ffd10a" />
-                    <stop offset="0.048" stop-color="#ffd00c" />
-                    <stop offset="1" stop-color="#fec23c" />
-                  </linearGradient>
-                </defs>
-                <g id="Group_69287" data-name="Group 69287" class="cls-1" transform="translate(-1648 -1496)">
-                  <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(1648 1496)">
-                    <path id="Rectangle_21" data-name="Rectangle 21" class="cls-2"
-                      d="M46.953,3.581c25.721,0,43.509,4.722,43.509,30.442s-.427,53.234-26.148,53.234c-11.111,0-30.324-5.111-43.467-16.479S-4.767,55.913-4.767,41.3C-4.767,15.583,21.232,3.581,46.953,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="Group_7-2" data-name="Group 7" transform="translate(1660 1507)">
-                    <path id="Rectangle_21-2" data-name="Rectangle 21" class="cls-2"
-                      d="M33.542,3.581c19.051,0,32.227,3.5,32.227,22.549S65.453,65.56,46.4,65.56c-8.23,0-22.461-3.786-32.2-12.206S-4.767,42.343-4.767,31.522C-4.767,12.471,14.49,3.581,33.542,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="svgexport-6_81_" data-name="svgexport-6 (81)" transform="translate(1680.019 1519.001)">
-                    <g id="Page-1" transform="translate(-0.018)">
-                      <g id="_001---Degree" data-name="001---Degree">
-                        <path id="Shape"
-                          d="M28.191,13.795c-2.526-1.15-7.849-1.194-8.622-1.194s-6.1.044-8.622,1.194V8.017c.4-.511,3.526-1.385,8.622-1.385s8.224.874,8.622,1.385ZM19.57,16.58c-4.908,0-7.99-.81-8.566-1.326.576-.516,3.66-1.326,8.566-1.326s7.99.81,8.566,1.326C27.559,15.77,24.477,16.58,19.57,16.58ZM34.16,11.938H32.834V9.948a.663.663,0,1,1,1.326,0Zm0-3.884V5.211l3.979,1.421ZM19.579,0,32.834,4.737V8.08a1.994,1.994,0,0,0-1.015.81l-2.3.82V7.958c0-2.579-8.93-2.653-9.948-2.653S9.622,5.38,9.622,7.958V9.71L1,6.632Z"
-                          transform="translate(-0.988)" />
-                        <path id="Shape-2" data-name="Shape"
-                          d="M21.686,32.323a13.967,13.967,0,0,1,.478,3.1,4.6,4.6,0,0,0-4.617.429,17.917,17.917,0,0,0-.456-3.536q1.205.025,2.472.025C20.288,32.343,20.992,32.335,21.686,32.323ZM20.227,42.954a3.316,3.316,0,1,1,3.316-3.316A3.316,3.316,0,0,1,20.227,42.954ZM.994,36.985a18.6,18.6,0,0,1,.663-5.637,18.6,18.6,0,0,1,.663,5.637,18.6,18.6,0,0,1-.663,5.637A18.6,18.6,0,0,1,.994,36.985Zm2,5.751a21.994,21.994,0,0,0,.648-5.751A22,22,0,0,0,3,31.234a116.363,116.363,0,0,0,12.708,1.05,17.072,17.072,0,0,1,.541,4.7c0,.1,0,.188,0,.28a4.6,4.6,0,0,0-.214,4.345l-.029.07A115.579,115.579,0,0,0,3,42.736ZM17.844,47.6l-.484-1.114a.663.663,0,0,0-.869-.345l-1.116.493L16.929,42.9a4.638,4.638,0,0,0,2.342,1.28Zm6.119-1.459a.663.663,0,0,0-.869.345l-.491,1.1-1.422-3.4A4.642,4.642,0,0,0,23.526,42.9l1.552,3.714Zm13.374-3.217a107.407,107.407,0,0,0-12.866-1.194l-.047-.114a4.615,4.615,0,0,0-.894-5.23,18.46,18.46,0,0,0-.474-4.086,110.7,110.7,0,0,0,14.281-1.248c.308.523.8,2.59.8,5.936S37.642,42.4,37.337,42.921Z"
-                          transform="translate(-0.982 -10.457)" />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <h6 class="mt-3 fw-bold">أعمال تشطيبات</h6>
+            <h3 class="box-title">أعمال مدنية و إنشائية</h3>
+            <p class="service-box_text">
+              أعمال المدنية والإنشائية تشمل مجموعة واسعة من الأنشطة التي تتعلق ببناء وتطوير المنشآت المدنية
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="600">
+          <div class="service-box style2 background-image">
+            <div class="service-content">
+              <div class="service-box_icon"><img src="images/icons/service_1_1.svg fill.png" alt="icon"></div>
+              <div class="service-box_number">01</div>
             </div>
-          </li>
-          <li class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="800">
-            <div class="service">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.229"
-                height="83.676" viewBox="0 0 95.229 83.676">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      opacity: 0.5;
-                    }
-
-                    .cls-2 {
-                      fill: url(#linear-gradient);
-                    }
-                  </style>
-                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#ffd10a" />
-                    <stop offset="0.048" stop-color="#ffd00c" />
-                    <stop offset="1" stop-color="#fec23c" />
-                  </linearGradient>
-                </defs>
-                <g id="Group_69277" data-name="Group 69277" class="cls-1" transform="translate(-1648 -1496)">
-                  <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(1648 1496)">
-                    <path id="Rectangle_21" data-name="Rectangle 21" class="cls-2"
-                      d="M46.953,3.581c25.721,0,43.509,4.722,43.509,30.442s-.427,53.234-26.148,53.234c-11.111,0-30.324-5.111-43.467-16.479S-4.767,55.913-4.767,41.3C-4.767,15.583,21.232,3.581,46.953,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="Group_7-2" data-name="Group 7" transform="translate(1660 1507)">
-                    <path id="Rectangle_21-2" data-name="Rectangle 21" class="cls-2"
-                      d="M33.542,3.581c19.051,0,32.227,3.5,32.227,22.549S65.453,65.56,46.4,65.56c-8.23,0-22.461-3.786-32.2-12.206S-4.767,42.343-4.767,31.522C-4.767,12.471,14.49,3.581,33.542,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="svgexport-6_82_" data-name="svgexport-6 (82)" transform="translate(1676.885 1519)">
-                    <g id="Group_68117" data-name="Group 68117" transform="translate(4.116 0.001)">
-                      <g id="Group_68116" data-name="Group 68116" transform="translate(0 0)">
-                        <g id="Group_68115" data-name="Group 68115" transform="translate(0 21.159)">
-                          <path id="Path_1282" data-name="Path 1282"
-                            d="M4.116,339.89,8.465,350.8l3.617-2.174L7.733,337.717Z"
-                            transform="translate(-4.116 -333.506)" />
-                          <path id="Path_1283" data-name="Path 1283"
-                            d="M121.687,282.222a7.561,7.561,0,0,0-6.116.449l-7.109,4.147-.037.031-.015.012v.005H108.4a2.811,2.811,0,0,1-1.791.669h-5.648V285.7H105.8a1.631,1.631,0,0,0,.011-3.262l-5.49-.038a.913.913,0,0,1-.327-.064,6.681,6.681,0,0,0-5.64-.107,7.661,7.661,0,0,0-3.438,4.483l3,7.528h11.306l16.632-10.457A.916.916,0,0,0,121.687,282.222Z"
-                            transform="translate(-84.395 -281.658)" />
-                        </g>
-                        <path id="Path_1284" data-name="Path 1284"
-                          d="M232.267,3c-3.607-8.138-17.6,1.632-.059,12.944l-.009-.041c18.388-11.313,3.077-20.784.068-12.9Z"
-                          transform="translate(-207.081 -0.001)" />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <h6 class="mt-3 fw-bold">أعمال مدنية وإنشائية</h6>
+            <h3 class="box-title">أعمال مدنية و إنشائية</h3>
+            <p class="service-box_text">
+              أعمال المدنية والإنشائية تشمل مجموعة واسعة من الأنشطة التي تتعلق ببناء وتطوير المنشآت المدنية
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="800">
+          <div class="service-box style2 background-image">
+            <div class="service-content">
+              <div class="service-box_icon"><img src="images/icons/service_1_1.svg fill.png" alt="icon"></div>
+              <div class="service-box_number">01</div>
             </div>
-          </li>
-          <li class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="400">
-            <div class="service">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.229"
-                  height="83.676" viewBox="0 0 95.229 83.676">
-                  <defs>
-                    <style>
-                      .cls-1 {
-                        opacity: 0.5;
-                      }
-
-                      .cls-2 {
-                        fill: url(#linear-gradient);
-                      }
-                    </style>
-                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                      <stop offset="0" stop-color="#ffd10a" />
-                      <stop offset="0.048" stop-color="#ffd00c" />
-                      <stop offset="1" stop-color="#fec23c" />
-                    </linearGradient>
-                  </defs>
-                  <g id="Group_68098" data-name="Group 68098" class="cls-1" transform="translate(-1648 -1496)">
-                    <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(1648 1496)">
-                      <path id="Rectangle_21" data-name="Rectangle 21" class="cls-2"
-                        d="M46.953,3.581c25.721,0,43.509,4.722,43.509,30.442s-.427,53.234-26.148,53.234c-11.111,0-30.324-5.111-43.467-16.479S-4.767,55.913-4.767,41.3C-4.767,15.583,21.232,3.581,46.953,3.581Z"
-                        transform="translate(4.767 -3.581)" />
-                    </g>
-                    <g id="Group_7-2" data-name="Group 7" transform="translate(1661 1506)">
-                      <path id="Rectangle_21-2" data-name="Rectangle 21" class="cls-2"
-                        d="M33.542,3.581c19.051,0,32.227,3.5,32.227,22.549S65.453,65.56,46.4,65.56c-8.23,0-22.461-3.786-32.2-12.206S-4.767,42.343-4.767,31.522C-4.767,12.471,14.49,3.581,33.542,3.581Z"
-                        transform="translate(4.767 -3.581)" />
-                    </g>
-                    <g id="svgexport-6_79_" data-name="svgexport-6 (79)" transform="translate(1675.999 1522)">
-                      <g id="Glyph" transform="translate(0 0)">
-                        <circle id="Ellipse_565" data-name="Ellipse 565" cx="2.354" cy="2.354" r="2.354"
-                          transform="translate(28.678)" />
-                        <circle id="Ellipse_566" data-name="Ellipse 566" cx="1.884" cy="1.884" r="1.884"
-                          transform="translate(18.319 3.767)" />
-                        <circle id="Ellipse_567" data-name="Ellipse 567" cx="2.354" cy="2.354" r="2.354"
-                          transform="translate(7.959)" />
-                        <path id="Path_1264" data-name="Path 1264" d="M20.443,38.51V35H19v2.307Z"
-                          transform="translate(-8.177 -17.767)" />
-                        <path id="Path_1265" data-name="Path 1265" d="M18.894,19H14.4L13.133,29.1h7.023Z"
-                          transform="translate(-6.543 -13.311)" />
-                        <path id="Path_1266" data-name="Path 1266" d="M44.886,35H42v4.111l2.886-2.406Z"
-                          transform="translate(-14.583 -17.767)" />
-                        <path id="Path_1267" data-name="Path 1267" d="M42,19h7.215V29.1H42Z"
-                          transform="translate(-14.583 -13.311)" />
-                        <path id="Path_1268" data-name="Path 1268"
-                          d="M55.653,23.213a.808.808,0,0,0,0-1.144L54,20.414V22.7l.51.51A.826.826,0,0,0,55.653,23.213Z"
-                          transform="translate(-17.925 -13.705)" />
-                        <path id="Path_1269" data-name="Path 1269"
-                          d="M54.453,28.171a.721.721,0,0,0-.593-.16.781.781,0,0,0-.6.788v3.53a.721.721,0,0,1-.211.51L46.56,39.333l-1.02-1.02,3.1-3.1L48.426,35a1.255,1.255,0,0,0-1.866,0L42.189,38.65a4.75,4.75,0,0,0-.621.649s-.006,0-.009.008A2.548,2.548,0,0,0,41,40.987v5.051H46.05V44.595a.722.722,0,0,1,.3-.587l4.906-3.5,3.45-6.9v-4.88a.721.721,0,0,0-.255-.551Z"
-                          transform="translate(-14.304 -15.817)" />
-                        <path id="Path_1270" data-name="Path 1270"
-                          d="M9.389,24.635a.82.82,0,0,0,.669-.158l1.213-1.466.289-2.3-2.52,2.447A.846.846,0,0,0,8.8,24.187a.826.826,0,0,0,.585.449Z"
-                          transform="translate(-5.314 -13.787)" />
-                        <path id="Path_1271" data-name="Path 1271" d="M33,37.051a.722.722,0,1,0,1.443,0V32H33Z"
-                          transform="translate(-12.076 -16.932)" />
-                        <path id="Path_1272" data-name="Path 1272" d="M29,24h4.329v4.329H29Z"
-                          transform="translate(-10.962 -14.704)" />
-                        <path id="Path_1273" data-name="Path 1273" d="M29,37.051a.722.722,0,1,0,1.443,0V32H29Z"
-                          transform="translate(-10.962 -16.932)" />
-                        <path id="Path_1274" data-name="Path 1274"
-                          d="M16.513,38.646l-4.317-3.6A1.245,1.245,0,0,0,10.282,35l-.211.211,3.1,3.1-1.02,1.02L5.654,32.839a.722.722,0,0,1-.211-.51V28.8a.781.781,0,0,0-.6-.788A.722.722,0,0,0,4,28.721V33.6l3.451,6.9,4.906,3.5a.722.722,0,0,1,.3.587v1.443h5.051V40.987a2.831,2.831,0,0,0-1.2-2.341Z"
-                          transform="translate(-4 -15.817)" />
-                        <path id="Path_1275" data-name="Path 1275" d="M23.536,22.229l2.435,2.084v-1.7l-2.665-2.221Z"
-                          transform="translate(-9.377 -13.699)" />
-                        <path id="Path_1276" data-name="Path 1276" d="M37,24.146l2.165-2.165V20.414L37,22.579Z"
-                          transform="translate(-13.19 -13.705)" />
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <h6 class="mt-3 fw-bold">الغازات الطبية للمنشآت</h6>
+            <h3 class="box-title">أعمال مدنية و إنشائية</h3>
+            <p class="service-box_text">
+              أعمال المدنية والإنشائية تشمل مجموعة واسعة من الأنشطة التي تتعلق ببناء وتطوير المنشآت المدنية
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="1000">
+          <div class="service-box style2 background-image">
+            <div class="service-content">
+              <div class="service-box_icon"><img src="images/icons/service_1_1.svg fill.png" alt="icon"></div>
+              <div class="service-box_number">01</div>
             </div>
-          </li>
-          <li class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="600">
-            <div class="service">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.229"
-                height="83.676" viewBox="0 0 95.229 83.676">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      opacity: 0.5;
-                    }
-
-                    .cls-2 {
-                      fill: url(#linear-gradient);
-                    }
-                  </style>
-                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#ffd10a" />
-                    <stop offset="0.048" stop-color="#ffd00c" />
-                    <stop offset="1" stop-color="#fec23c" />
-                  </linearGradient>
-                </defs>
-                <g id="Group_69287" data-name="Group 69287" class="cls-1" transform="translate(-1648 -1496)">
-                  <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(1648 1496)">
-                    <path id="Rectangle_21" data-name="Rectangle 21" class="cls-2"
-                      d="M46.953,3.581c25.721,0,43.509,4.722,43.509,30.442s-.427,53.234-26.148,53.234c-11.111,0-30.324-5.111-43.467-16.479S-4.767,55.913-4.767,41.3C-4.767,15.583,21.232,3.581,46.953,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="Group_7-2" data-name="Group 7" transform="translate(1660 1507)">
-                    <path id="Rectangle_21-2" data-name="Rectangle 21" class="cls-2"
-                      d="M33.542,3.581c19.051,0,32.227,3.5,32.227,22.549S65.453,65.56,46.4,65.56c-8.23,0-22.461-3.786-32.2-12.206S-4.767,42.343-4.767,31.522C-4.767,12.471,14.49,3.581,33.542,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="svgexport-6_81_" data-name="svgexport-6 (81)" transform="translate(1680.019 1519.001)">
-                    <g id="Page-1" transform="translate(-0.018)">
-                      <g id="_001---Degree" data-name="001---Degree">
-                        <path id="Shape"
-                          d="M28.191,13.795c-2.526-1.15-7.849-1.194-8.622-1.194s-6.1.044-8.622,1.194V8.017c.4-.511,3.526-1.385,8.622-1.385s8.224.874,8.622,1.385ZM19.57,16.58c-4.908,0-7.99-.81-8.566-1.326.576-.516,3.66-1.326,8.566-1.326s7.99.81,8.566,1.326C27.559,15.77,24.477,16.58,19.57,16.58ZM34.16,11.938H32.834V9.948a.663.663,0,1,1,1.326,0Zm0-3.884V5.211l3.979,1.421ZM19.579,0,32.834,4.737V8.08a1.994,1.994,0,0,0-1.015.81l-2.3.82V7.958c0-2.579-8.93-2.653-9.948-2.653S9.622,5.38,9.622,7.958V9.71L1,6.632Z"
-                          transform="translate(-0.988)" />
-                        <path id="Shape-2" data-name="Shape"
-                          d="M21.686,32.323a13.967,13.967,0,0,1,.478,3.1,4.6,4.6,0,0,0-4.617.429,17.917,17.917,0,0,0-.456-3.536q1.205.025,2.472.025C20.288,32.343,20.992,32.335,21.686,32.323ZM20.227,42.954a3.316,3.316,0,1,1,3.316-3.316A3.316,3.316,0,0,1,20.227,42.954ZM.994,36.985a18.6,18.6,0,0,1,.663-5.637,18.6,18.6,0,0,1,.663,5.637,18.6,18.6,0,0,1-.663,5.637A18.6,18.6,0,0,1,.994,36.985Zm2,5.751a21.994,21.994,0,0,0,.648-5.751A22,22,0,0,0,3,31.234a116.363,116.363,0,0,0,12.708,1.05,17.072,17.072,0,0,1,.541,4.7c0,.1,0,.188,0,.28a4.6,4.6,0,0,0-.214,4.345l-.029.07A115.579,115.579,0,0,0,3,42.736ZM17.844,47.6l-.484-1.114a.663.663,0,0,0-.869-.345l-1.116.493L16.929,42.9a4.638,4.638,0,0,0,2.342,1.28Zm6.119-1.459a.663.663,0,0,0-.869.345l-.491,1.1-1.422-3.4A4.642,4.642,0,0,0,23.526,42.9l1.552,3.714Zm13.374-3.217a107.407,107.407,0,0,0-12.866-1.194l-.047-.114a4.615,4.615,0,0,0-.894-5.23,18.46,18.46,0,0,0-.474-4.086,110.7,110.7,0,0,0,14.281-1.248c.308.523.8,2.59.8,5.936S37.642,42.4,37.337,42.921Z"
-                          transform="translate(-0.982 -10.457)" />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <h6 class="mt-3 fw-bold">نظام التليفون للمنشآت</h6>
-            </div>
-          </li>
-          <li class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="800">
-            <div class="service">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.229"
-                height="83.676" viewBox="0 0 95.229 83.676">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      opacity: 0.5;
-                    }
-
-                    .cls-2 {
-                      fill: url(#linear-gradient);
-                    }
-                  </style>
-                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#ffd10a" />
-                    <stop offset="0.048" stop-color="#ffd00c" />
-                    <stop offset="1" stop-color="#fec23c" />
-                  </linearGradient>
-                </defs>
-                <g id="Group_69277" data-name="Group 69277" class="cls-1" transform="translate(-1648 -1496)">
-                  <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(1648 1496)">
-                    <path id="Rectangle_21" data-name="Rectangle 21" class="cls-2"
-                      d="M46.953,3.581c25.721,0,43.509,4.722,43.509,30.442s-.427,53.234-26.148,53.234c-11.111,0-30.324-5.111-43.467-16.479S-4.767,55.913-4.767,41.3C-4.767,15.583,21.232,3.581,46.953,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="Group_7-2" data-name="Group 7" transform="translate(1660 1507)">
-                    <path id="Rectangle_21-2" data-name="Rectangle 21" class="cls-2"
-                      d="M33.542,3.581c19.051,0,32.227,3.5,32.227,22.549S65.453,65.56,46.4,65.56c-8.23,0-22.461-3.786-32.2-12.206S-4.767,42.343-4.767,31.522C-4.767,12.471,14.49,3.581,33.542,3.581Z"
-                      transform="translate(4.767 -3.581)" />
-                  </g>
-                  <g id="svgexport-6_82_" data-name="svgexport-6 (82)" transform="translate(1676.885 1519)">
-                    <g id="Group_68117" data-name="Group 68117" transform="translate(4.116 0.001)">
-                      <g id="Group_68116" data-name="Group 68116" transform="translate(0 0)">
-                        <g id="Group_68115" data-name="Group 68115" transform="translate(0 21.159)">
-                          <path id="Path_1282" data-name="Path 1282"
-                            d="M4.116,339.89,8.465,350.8l3.617-2.174L7.733,337.717Z"
-                            transform="translate(-4.116 -333.506)" />
-                          <path id="Path_1283" data-name="Path 1283"
-                            d="M121.687,282.222a7.561,7.561,0,0,0-6.116.449l-7.109,4.147-.037.031-.015.012v.005H108.4a2.811,2.811,0,0,1-1.791.669h-5.648V285.7H105.8a1.631,1.631,0,0,0,.011-3.262l-5.49-.038a.913.913,0,0,1-.327-.064,6.681,6.681,0,0,0-5.64-.107,7.661,7.661,0,0,0-3.438,4.483l3,7.528h11.306l16.632-10.457A.916.916,0,0,0,121.687,282.222Z"
-                            transform="translate(-84.395 -281.658)" />
-                        </g>
-                        <path id="Path_1284" data-name="Path 1284"
-                          d="M232.267,3c-3.607-8.138-17.6,1.632-.059,12.944l-.009-.041c18.388-11.313,3.077-20.784.068-12.9Z"
-                          transform="translate(-207.081 -0.001)" />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <h6 class="mt-3 fw-bold">أعمال ميكانيك</h6>
-            </div>
-          </li>
-        </ul>
+            <h3 class="box-title">أعمال مدنية و إنشائية</h3>
+            <p class="service-box_text">
+              أعمال المدنية والإنشائية تشمل مجموعة واسعة من الأنشطة التي تتعلق ببناء وتطوير المنشآت المدنية
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-------------- project section -------------->
-  <section class="space" id="projects">
+  <section class="" id="projects">
+    <!--  section -->
+    <div class="project-imgs" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+      <div class="container">
+        <div class="title-area ">
+          <span class="sub-title style1">بعض مشارعينا المنفذة</span>
+          <h2 class="sec-title text-white">بعض نماذج أعمال البناء والتشييد</h2>
+        </div>
+        <div class="img-slider">
+          <div class="owl-carousel">
+            <a data-fancybox="gallery" href="images/build.webp">
+              <img src="images/build.webp">
+            </a>
+            <a data-fancybox="gallery" href="images/build2.webp">
+              <img src="images/build2.webp">
+            </a>
+            <a data-fancybox="gallery" href="images/build3.webp">
+              <img src="images/build3.webp">
+            </a>
+            <a data-fancybox="gallery" href="images/build.webp">
+              <img src="images/build.webp">
+            </a>
+            <a data-fancybox="gallery" href="images/build2.webp">
+              <img src="images/build2.webp">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
+      <!-- project section -->
+      <div class="project-wrapper space" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
+        <div class="d-flex justify-content-center mb-3">
+          <h5 class="title">بعض مشروعاتنا المنفذة </h5>
+        </div>
+        <div class="m-0 items-container owl-carousel">
+          <div class="item">
+            <div class="card">
+              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h4 class="card-title">مكين 36</h4>
+                </div>
+                <ul class="mb-0">
+                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
+                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h4 class="card-title">مكين 36</h4>
+                </div>
+                <ul class="mb-0">
+                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
+                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h4 class="card-title">مكين 36</h4>
+                </div>
+                <ul class="mb-0">
+                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
+                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h4 class="card-title">مكين 36</h4>
+                </div>
+                <ul class="mb-0">
+                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
+                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- project table section -->
-      <div class="d-flex justify-content-center mb-3">
-        <img src="images/bi_building-up.svg" alt="" width="30px">
-        <h4 class="mx-2 fw-bold">جدول المشاريع المنفذة</h4>
+      <div class="space d-flex justify-content-center mb-3">
+        <h5 class="title">جدول المشاريع المنفذة</h5>
       </div>
       <div class="gridtable" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
         <div class="table-responsive">
@@ -855,200 +753,152 @@
           </table>
         </div>
       </div>
-      <!-- project section -->
-      <div class="project-wrapper space" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
-        <div class="d-flex justify-content-center mb-3">
-          <img src="images/mdi_progress-check.svg" alt="" width="30px">
-          <h4 class="mx-2 fw-bold">بعض مشروعاتنا المنفذة </h4>
-        </div>
-        <div class="m-0 items-container owl-carousel">
-          <div class="item">
-            <div class="card">
-              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <a href="">
-                    <h4 class="card-title">مكين 36</h4>
-                  </a>
-                </div>
-                <ul class="mb-0">
-                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
-                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <a href="">
-                    <h4 class="card-title">مكين 36</h4>
-                  </a>
-                </div>
-                <ul class="mb-0">
-                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
-                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <a href="">
-                    <h4 class="card-title">مكين 36</h4>
-                  </a>
-                </div>
-                <ul class="mb-0">
-                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
-                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <img src="images/بروفايل_شركة_عبدالرحمن_للمقاولات_compressed-23 1.png " class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <a href="">
-                    <h4 class="card-title">مكين 36</h4>
-                  </a>
-                </div>
-                <ul class="mb-0">
-                  <li><i class="bi bi-geo-alt-fill"></i> حي العارض</li>
-                  <li><i class="bi bi-textarea-resize"></i> 200 متر مربع</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- video section -->
-    <div class="project-imgs space" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-      <div class="container">
-        <div class="d-flex justify-content-center mb-3">
-          <img src="images/bi_building-up.svg" alt="" width="30px">
-          <h4 class="mx-2 fw-bold">بعض نماذج أعمال البناء والتشييد</h4>
-        </div>
-        <div class="img-slider">
-          <div class="owl-carousel">
-            <img src="images/build.webp">
-            <img src="images/build2.webp">
-            <img src="images/build3.webp">
-            <img src="images/build.webp">
-            <img src="images/build2.webp">
-            <img src="images/build3.webp">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- video section -->
-    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+      <!-- video section -->
       <div class="video space">
         <div class="d-flex justify-content-center mb-3">
-          <img src="images/chat-arrow-grow 1.svg" alt="" width="30px">
-          <h4 class="mx-2 fw-bold">فيديوهات المشاريع</h4>
+          <h5 class="title">فيديوهات المشاريع</h5>
         </div>
         <div class="video-slider">
           <div class="owl-carousel">
-            <video src="images/vid.mp4" controls></video>
-            <video src="images/vid.mp4" controls></video>
-            <video src="images/vid.mp4" controls></video>
-            <video src="images/vid.mp4" controls></video>
-            <video src="images/vid.mp4" controls></video>
+            <a data-fancybox="videos" href="images/vid.mp4">            
+              <video src="images/vid.mp4" controls=""></video>
+            </a>
+            <a data-fancybox="videos" href="images/vid.mp4">            
+              <video src="images/vid.mp4" controls=""></video>
+            </a>
+            <a data-fancybox="videos" href="images/vid.mp4">            
+              <video src="images/vid.mp4" controls=""></video>
+            </a>
+            <a data-fancybox="videos" href="images/vid.mp4">            
+              <video src="images/vid.mp4" controls=""></video>
+            </a>
+            <a data-fancybox="videos" href="images/vid.mp4">            
+              <video src="images/vid.mp4" controls=""></video>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- map section -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3621.1289889474488!2d46.6546793150021!3d24.825262084070534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ5JzMwLjkiTiA0NsKwMzknMjQuNyJF!5e0!3m2!1sen!2seg!4v1681570798130!5m2!1sen!2seg"
-            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
+    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
     </div>
   </section>
+
 
   <!-------------- contact section -------------->
-  <section id="contactUs" class="contactUs space">
-    <div class="contactUs-wrapper">
+  <section id="contactUs">
+    <div class="space background-image" data-overlay="title" data-opacity="9"
+      style="background-image: url('images/bg2.jpg');">
       <div class="container">
-        <div class="row w-100 align-items-center justify-content-between gy-5">
-          <div class="col-12 col-md-5" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
-            <div class="contact-form">
-              <form action="">
-                <div class="form-group">
-                  <label for="">البريد الإلكتروني*</label>
-                  <input type="email" class="form-control" placeholder="البريد الالكتروني" required>
-                </div>
-                <div class="form-group">
-                  <label for="">العنوان *</label>
-                  <input type="text" class="form-control" placeholder="العنوان" required>
-                </div>
-                <div class="form-group">
-                  <label for="">الرسالة</label>
-                  <textarea class="form-control" rows="3" placeholder="اكتب رسالتك هنا" required=""></textarea>
-                </div>
-                <button type="submit" class="main-btn">
-                  <span>
-
-                    ارسال رسالة
-                  </span>
-                </button>
-              </form>
+        <div class="title-area  mb-0"><span class="sub-title style1 mb-20">احصل على استشارة</span>
+          <h2 class="sec-title text-white">احصل على استشارة مجانية
+            اتصل بنا <span class="text-theme">!</span></h2>
+        </div>
+        <div class="cta-group">
+          <a href="#contactUs" class="main-btn th-btn style1 th-icon">
+            <span>
+              <i class="bi bi-arrow-up-right"></i>
+              تواصل معنا
+            </span>
+          </a>
+          <button class="main-btn th-btn style3 th-icon"  role="button" data-bs-toggle="modal" data-bs-target="#whatsappModal">
+            <span>
+              <i class="bi bi-arrow-up-right"></i>
+              اتصل بنا
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- map section -->
+    <div class="pt-5">
+      <div class="container map-bg pt-4">
+        <div class="row align-items-center">
+          <div class="col-md-5">
+            <div class="d-flex gap-2 align-items-center mb-4">
+              <img src="images/icons/location.svg" alt="" width="30px">
+              <h5 class="fw-bold mb-0">المنصورة -أحمد ماهر</h5>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+              <img src="images/icons/location.svg" alt="" width="30px">
+              <h5 class="fw-bold mb-0">24°49'30.9"N 46°39'24.7"E</h5>
             </div>
           </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-            <div class="contact-txt">
-              <h3>
-                التجربة والخبرة في
-                المقاولات العامة !
-              </h3>
-              <p>
-                تقوم شركة مدن العقارية ببناء علاقات ومشاريع تدوم. تقديم قائمة رائعة من عملاء على المدى الطويل من ذوي
-                الخبرة والخبرة في صناعات متعددة.
-              </p>
-              <div class="row justify-content-between">
-                <div class="col-auto">
-                  <div class="str">
-                    <img src="images/icons/Icon (2).png" alt="">
-                    <h5>اداء
-                      تدابير
-                    </h5>
+          <div class="col-md-7">
+            <div class="map_frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3621.1289889474488!2d46.6546793150021!3d24.825262084070534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ5JzMwLjkiTiA0NsKwMzknMjQuNyJF!5e0!3m2!1sen!2seg!4v1681570798130!5m2!1sen!2seg"
+                width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contactUs">
+      
+      <div class="contactUs-wrapper">
+        <div class="container">
+          <div class="row w-100 align-items-center justify-content-between gy-5">
+            <div class="col-12 col-md-5" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
+              <div class="contact-form">
+                <form action="">
+                  <div class="form-group">
+                    <label for="">البريد الإلكتروني*</label>
+                    <input type="email" class="form-control" placeholder="البريد الالكتروني" required>
                   </div>
-                </div>
-                <div class="col-auto">
-                  <div class="str">
-                    <img src="images/icons/Icon (1).png" alt="">
-                    <h5>حلول سريعة
-                      للمشكلات
-                    </h5>
+                  <div class="form-group">
+                    <label for="">العنوان *</label>
+                    <input type="text" class="form-control" placeholder="العنوان" required>
                   </div>
-                </div>
-                <div class="col-auto">
-                  <div class="str">
-                    <img src="images/icons/Icon.png" alt="">
-                    <h5>
-                      الإهتمام
-                      بالبيئة
-                    </h5>
+                  <div class="form-group">
+                    <label for="">الرسالة</label>
+                    <textarea class="form-control" rows="3" placeholder="اكتب رسالتك هنا" required=""></textarea>
+                  </div>
+                  <button type="submit" class="main-btn">
+                    <span>
+  
+                      ارسال رسالة
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+              <div class="contact-txt">
+                <h3>
+                  التجربة والخبرة في
+                  المقاولات العامة !
+                </h3>
+                <p>
+                  تقوم شركة مدن العقارية ببناء علاقات ومشاريع تدوم. تقديم قائمة رائعة من عملاء على المدى الطويل من ذوي
+                  الخبرة والخبرة في صناعات متعددة.
+                </p>
+                <div class="row justify-content-between">
+                  <div class="col-auto">
+                    <div class="str">
+                      <img src="images/icons/Icon (2).png" alt="">
+                      <h5>اداء
+                        تدابير
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="str">
+                      <img src="images/icons/Icon (1).png" alt="">
+                      <h5>حلول سريعة
+                        للمشكلات
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="str">
+                      <img src="images/icons/Icon.png" alt="">
+                      <h5>
+                        الإهتمام
+                        بالبيئة
+                      </h5>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1065,95 +915,194 @@
       <div class="container">
         <div class="row gx-4 gy-4 justify-content-between">
           <!-- الشركه  -->
-          <div class="col-12 col-lg-auto text-center">
+          <div class="col-12 col-lg-auto">
             <img class="ms-3" src="images/logo.png" width="130px" alt="">
-            <p>
+            <p class="text-muted" style="width: max-content; margin-top: .85rem;">
               ابحث عن مقاولين ذوي خبرة ذات صلة ،
               سمعة راسخة ، والترخيص المناسب.
             </p>
-            <ul class="footer-nav">
-              <li><a href="#">الرئيسية</a></li>
-              <li><a href="#about">من نحن</a></li>
-              <li><a href="#services">خدماتنا</a></li>
-              <li><a href="#projects">سابقة أعمالنا</a></li>
-              <li><a href="#contactUs">تواصل معنا</a></li>
+            <ul class="company_info">
+              <li>
+                <h6>رقم الموبايل</h6>
+                <div class="info">
+                  <img src="images/icons/call.png" alt="" width="20px">
+                  <span>
+                    +1 952-435-7106
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <h6>البريد الإلكتروني</h6>
+                <div class="info">
+                  <img src="images/icons/email.png" alt="" width="20px">
+                  <span>
+                    info@modon-int.com
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <h6>الموقع</h6>
+                <div class="info">
+                  <img src="images/icons/loca.png" alt="" width="20px">
+                  <span>
+                    شارع احمد ماهر-المنصورة
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <h6>الرمز البريدي</h6>
+                <div class="info">
+                  <img src="images/icons/bared.png" alt="" width="20px">
+                  <span>
+                    12735
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <h6>تلفاكس</h6>
+                <div class="info">
+                  <img src="images/icons/telfax.png" alt="" width="20px">
+                  <span>
+                    0114381246
+                  </span>
+                </div>
+              </li>
             </ul>
-            <!-- social -->
-            <div class="social">
-              <div>
-                <a href="">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <i class="bi bi-twitter"></i>
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <i class="bi bi-facebook"></i>
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <i class="bi bi-whatsapp"></i></a>
-              </div>
-            </div>
+
+          </div>
+
+          <div class="col-auto col-md-6 col-lg-3">
+            <h4 class="widget_title">
+              لينكات سريعه
+            </h4>
+            <ul class="footer-nav">
+              <li>
+                <i class="bi bi-arrow-left-short"></i>
+                <a href="#">الرئيسية</a>
+              </li>
+              <li>
+                <i class="bi bi-arrow-left-short"></i>
+                <a href="#about">من نحن</a>
+              </li>
+              <li>
+                <i class="bi bi-arrow-left-short"></i>
+                <a href="#services">خدماتنا</a>
+              </li>
+              <li>
+                <i class="bi bi-arrow-left-short"></i>
+                <a href="#projects">سابقة أعمالنا</a>
+              </li>
+              <li>
+                <i class="bi bi-arrow-left-short"></i>
+                <a href="#contactUs">تواصل معنا</a>
+              </li>
+            </ul>
           </div>
 
           <!-- معلومات التواصل -->
-          <div class="col-auto col-md-6 col-lg-5">
-            <h4>معلومات التواصل</h4>
-            <ul>
-              <li>
-                <img src="images/_01_align_center.png" width="20px" class="ms-2" alt="">
-                <a href="https://goo.gl/maps/BA4k2F6Vu77nc2gcA">
-                  العنوان: الرياض- العزيزية-عمائر التعمير-الدور الثاني
-                  مكتب 106(الإدارة العامة)
-                </a>
-              </li>
-              <li>
-                <img src="images/phone-call 1.png" width="20px" class="ms-2" alt="">
-                <a href="tel:0547777223">
-                  رقم التواصل : 0112063357 -00966541816823
-                </a>
-              </li>
-              <li>
-                <img src="images/ic_outline-email (1).png" width="20px" class="ms-2" alt="">
-                <a href="mailto:alemaa.factory@gmail.com">
-                  البريد الإلكتروني : Mohrefaei2007@riyadh.kenana.com
-                </a>
-              </li>
-            </ul>
+          <div class="col-auto col-md-6 col-lg-3">
+            <h4 class="widget_title">
+              صور أعمالنا
+            </h4>
+            <div class="grid-proj">
+              <div class="item proj1">
+                <img src="images/about_2_2..png" alt="">
+              </div>
+              <div class="item proj2">
+                <img src="images/about_2_2..png" alt="">
+              </div>
+              <div class="item proj3">
+                <img src="images/about_2_2..png" alt="">
+              </div>
+              <div class="item proj4">
+                <img src="images/about_2_2..png" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </footer>
 
-
-  <div id="social-media">
-    <div class="icon">
-      <a aria-label="facebook" href="https://www.facebook.com" target="_blank" class="link">
-      </a>
-      <i class="bi bi-facebook"></i>
-    </div>
-    <div class="icon">
-      <a aria-label="instgram" href="https://www.instagram.com" target="_blank" class="link">
-      </a>
-      <i class="bi bi-instagram"></i>
-    </div>
-    <div class="icon">
-      <a aria-label="google" href="https://maps.app.goo.gl/dXudxxXWfpov8yrN8" target="_blank" class="link">
-      </a>
-      <i class="bi bi-google"></i>
+  <div class="copyRight">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div id="social-media">
+          <span>تابعنا على </span>
+          <div class="icon">
+            <a aria-label="instgram" href="https://www.instagram.com" target="_blank" class="link">
+            </a>
+            <i class="bi bi-instagram"></i>
+          </div>
+          <div class="icon">
+            <a aria-label="facebook" href="https://www.facebook.com" target="_blank" class="link">
+            </a>
+            <i class="bi bi-facebook"></i>
+          </div>
+          <div class="icon">
+            <a aria-label="facebook" href="https://www.facebook.com" target="_blank" class="link">
+            </a>
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <div class="icon">
+            <a aria-label="google" href="https://maps.app.goo.gl/dXudxxXWfpov8yrN8" target="_blank" class="link">
+            </a>
+            <i class="bi bi-twitter-x"></i>
+          </div>
+        </div>
+        <div class="copyRight_txt">
+          <p>Copyright &copy; 2024 <span>modon</span>. All Rights Reserved.</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <a class="toTop" href="#top">
     <i class="bi bi-chevron-up"></i>
   </a>
+
+  <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="whatsappModalLabel">راسلنا عبر الواتساب من خلال الارقام التالية</h1>
+          <button type="button" class="btn-close me-auto ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li class="num1">
+              <a class="" href="https://api.whatsapp.com/send/?phone=0541816823">
+                <i class="bi bi-whatsapp"></i>
+                <span>
+                  0541816823
+                </span>
+              </a>
+            </li>
+            <li class="num2">
+              <a class="" href="https://api.whatsapp.com/send/?phone=0541816823">
+                <i class="bi bi-whatsapp"></i>
+                <span>
+                  0541816823
+                </span>
+              </a>
+            </li>
+            <li class="num3">
+              <a class="" href="https://api.whatsapp.com/send/?phone=0541816823">
+                <i class="bi bi-whatsapp"></i>
+                <span>
+                  0541816823
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- jQuery script -->
   <script src="js/jquery-3.6.0.min.js"></script>
@@ -1163,6 +1112,9 @@
 
   <!-- bootstrap script -->
   <script src="js/bootstrap.min.js"></script>
+  
+  <!-- fancybox script -->
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
   <!-- aos script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
