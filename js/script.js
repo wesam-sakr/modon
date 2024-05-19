@@ -106,10 +106,12 @@ $(".project-wrapper .items-container.owl-carousel").owlCarousel({
     rtl: true,
     responsive: {
         0: {
-            items: 2
+            items: 2,
+            stagePadding: 0,
         },
         600: {
-            items: 3
+            items: 3,
+            stagePadding: 30,
         },
         1000: {
             items: 3
@@ -119,7 +121,7 @@ $(".project-wrapper .items-container.owl-carousel").owlCarousel({
 $('.img-slider .owl-carousel').owlCarousel({
     nav: false,
     dots: true,
-    loop: true,
+    loop: false,
     stagePadding: 80,
     autoplay: false,
     autoplayHoverPause: true,
@@ -128,10 +130,12 @@ $('.img-slider .owl-carousel').owlCarousel({
     rtl: true,
     responsive:{
         0:{
-            items:2
+            items:2,
+            stagePadding: 0,
         },
         600:{
-            items:3
+            items:3,
+            stagePadding: 0,
         },
         1000:{
             items:3
@@ -151,10 +155,12 @@ $('.video-slider .owl-carousel').owlCarousel({
     rtl: true,
     responsive:{
         0:{
-            items:2
+            items:2,
+            stagePadding: 0,
         },
         600:{
-            items:3
+            items:3,
+            stagePadding: 30,
         },
         1000:{
             items:3
